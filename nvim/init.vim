@@ -17,3 +17,5 @@ set mouse=a        "启用鼠标
 
 set guifont=JetBrainsMono\ Nerd\ Font:h12
 
+"回车自动换行
+nnoremap <CR> i<CR><Esc>
