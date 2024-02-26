@@ -1,0 +1,10 @@
+[user]
+	name = talentestors
+	email = talentestors@gmail.com
+[http]
+	sslVerify = false
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+
