@@ -44,6 +44,8 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Import-Module "$($(Get-Item $(Get-Command scoop).Path).Directory.Parent.FullName)\modules\scoop-completion"
 Import-Module "$($(Get-Item $(Get-Command scoop).Path).Directory.Parent.FullName)\modules\scoop-completion" -ErrorAction SilentlyContinue
 
+Invoke-Expression (&scoop-search --hook)
+
 # Alias
 
 Function power_off{shutdown -s -t 00}
