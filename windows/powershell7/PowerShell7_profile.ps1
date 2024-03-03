@@ -1,10 +1,8 @@
 # PSVersion=7.3.8
 
-# 首先需要加载oh-my-posh模块
-Import-Module oh-my-posh
-# 然后指定一个主题
-# Set-PoshPrompt -Theme jandedobbeleer
-oh-my-posh init pwsh --config 'C:\Users\talentestors\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json'| Invoke-Expression
+$ENV:STARSHIP_CONFIG = "$HOME/.config/starship1.toml"
+
+Invoke-Expression (&starship init powershell)
 
 Import-Module posh-git
 
