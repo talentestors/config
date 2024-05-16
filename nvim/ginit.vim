@@ -1,3 +1,3 @@
 if exists(':GuiFont')
-    GuiFont! JetBrainsMono\ Nerd\ Font:h10
+    GuiFont! JetBrainsMono\ Nerd\ Font:h11
 endif 
