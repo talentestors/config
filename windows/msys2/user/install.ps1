@@ -1,1 +1,0 @@
-git clone --depth 1 git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
