@@ -10,3 +10,6 @@ set smartindent
 set backspace=2
 set co=5
 set mouse=a
+set nobackup
+set noswapfile
+
