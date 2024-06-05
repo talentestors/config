@@ -12,4 +12,3 @@ set co=5
 set mouse=a
 set nobackup
 set noswapfile
-
