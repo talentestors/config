@@ -46,11 +46,21 @@ Invoke-Expression (&scoop-search --hook)
 
 # Alias
 
-Function power_off{shutdown -s -t 00}
+Function power_off{
+    param (
+        [int]$time
+    )
+    shutdown -s -t $time
+}
 
 Set-Alias -Name poweroff -Value power_off
 
-Function re_boot{shutdown -r -t 00}
+Function re_boot{
+    param (
+        [int]$time
+    )
+    shutdown -r -t $time
+}
 
 Set-Alias -Name reboot -Value re_boot
 
