@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="candy"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitignore emoji vscode man)
+plugins=(git gitignore emoji vscode man command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,23 +105,5 @@ export LANG=zh_CN.UTF-8
 
 # My config
 ## starship
-eval "$(starship init zsh)"
-
-export STARSHIP_CONFIG="C:\Users\talentestors\.config\starship1.toml"
-
-## alias
-alias cls='clear'
-alias ll='ls -l'
-alias la='ls -a'
-alias vi='vim'
-alias grep="grep --color=auto"
-alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
-alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
-alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
-alias -s js=vi
-alias -s c=vi
-alias -s java=vi
-alias -s txt=vi
-
 ## load other config
-source ~/.bash_profile
+# source ~/.bash_profile
