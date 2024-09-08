@@ -76,6 +76,15 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# My config
+## starship
+## load other config
+# source ~/.bash_profile
+# Run bash -c "help ${1}" when help command is executed in zsh
+function help() {
+    bash -c "help $@"
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -102,8 +111,3 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Created by newuser for 5.9
-
-# My config
-## starship
-## load other config
-# source ~/.bash_profile
