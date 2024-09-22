@@ -41,6 +41,6 @@ set ts=4 " tabstop
 set softtabstop=4 " 在编辑模式的时候按退格键的时候退回缩进的长度
 set shiftwidth=4 " 每一级缩进的长度
 " expandtab 缩进用空格来表示，noexpandtab 则是用制表符表示一个缩进。
-set noexpandtab
+set expandtab
 set autoindent " 自动缩进
 
