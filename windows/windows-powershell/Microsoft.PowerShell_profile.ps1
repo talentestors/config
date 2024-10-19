@@ -1,5 +1,8 @@
 # PSVersion=5.1.22621.2428
 
+# Set PowerShell to adopt the default ordinary UTF-8 encoding by default.
+$PSDefaultParameterValues['Out-File:Encoding'] = 'Default'
+
 Invoke-Expression (&starship init powershell)
 
 Import-Module -Name Terminal-Icons

@@ -1,5 +1,8 @@
 # PSVersion=7.3.8
 
+# Set PowerShell to adopt the default ordinary UTF-8 encoding by default.
+$PSDefaultParameterValues['Out-File:Encoding'] = 'Default'
+
 $ENV:STARSHIP_CONFIG = "$HOME/.config/starship1.toml"
 
 Invoke-Expression (&starship init powershell)
