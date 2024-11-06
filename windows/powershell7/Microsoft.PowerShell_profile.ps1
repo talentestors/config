@@ -67,6 +67,18 @@ Function re_boot{
 
 Set-Alias -Name reboot -Value re_boot
 
+Function mk_link{
+    param(
+        [string]$Option,
+        [string]$Link,
+        [string]$Target
+    )
+    CMD.EXE /C "mklink $Option $Link $Target"
+}
+
+Set-Alias -Name mklink -Value mk_link
+Set-Alias -Name ln -Value mk_link
+
 Function linux_ll{ls | Format-Wide -Column 5 -Property Name}
 
 Set-Alias -Name ll -Value linux_ll
@@ -76,3 +88,4 @@ Function lforce{Get-ChildItem -Force}
 Set-Alias -Name lf -Value lforce
 
 Set-Alias -Name vim -Value nvim
+
