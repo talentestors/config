@@ -8,7 +8,11 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="crcandy"
+ZSH_THEME=""
+## starship
+eval "$(starship init zsh)"
+
+export STARSHIP_CONFIG="C:\Users\talentestors\.config\starship1.toml"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,27 +74,18 @@ ZSH_THEME="crcandy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitignore emoji vscode man command-not-found zsh-autosuggestions z)
+plugins=(gitignore emoji vscode man zsh-autosuggestions z)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# My config
-## starship
-## load other config
-# source ~/.bash_profile
-# Run bash -c "help ${1}" when help command is executed in zsh
-function help() {
-    bash -c "help $@"
-}
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
-# export LC_ALL=zh_CN.UTF-8
-# export LANG=zh_CN.UTF-8
+# export LANG=en_US.UTF-8
+export LC_ALL=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -111,3 +106,26 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Created by newuser for 5.9
+
+# My config
+
+export TIME_STYLE=long-iso
+
+## alias
+alias cls='clear'
+alias ls='ls --color=always --time-style="+%Y-%m-%d %H:%M:%S"'
+alias less='less -R'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='vim'
+alias grep="grep --color=auto"
+alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
+alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
+alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
+alias -s js=vi
+alias -s c=vi
+alias -s java=vi
+alias -s txt=vi
+
+## load other config
+source ~/.bash_profile

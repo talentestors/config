@@ -9,6 +9,10 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME=""
+## starship
+eval "$(starship init zsh)"
+
+export STARSHIP_CONFIG="C:\Users\talentestors\.config\starship1.toml"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,13 +108,13 @@ export LANG=zh_CN.UTF-8
 # Created by newuser for 5.9
 
 # My config
-## starship
-eval "$(starship init zsh)"
 
-export STARSHIP_CONFIG="C:\Users\talentestors\.config\starship1.toml"
+export TIME_STYLE=long-iso
 
 ## alias
 alias cls='clear'
+alias ls='ls --color=always --time-style="+%Y-%m-%d %H:%M:%S"'
+alias less='less -R'
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'

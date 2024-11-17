@@ -10,3 +10,5 @@
 	ignorecase = false # 忽略文件大小写
 	autocrlf = true # windows换行符 (only Windows)
 	pager = 
+[color]
+	ui = always
