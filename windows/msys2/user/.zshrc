@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitignore emoji vscode man zsh-autosuggestions)
+plugins=(gitignore emoji vscode man zsh-autosuggestions z)
 
 source $ZSH/oh-my-zsh.sh
 
