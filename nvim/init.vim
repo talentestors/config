@@ -4,6 +4,7 @@ lua require('conf/nvim-treesitter-context')
 lua require('conf/nvim-treesitter')
 lua require('conf/nvim-tree')
 lua require('conf/bufferline')
+lua require('conf/toggleterm')
 
 " lua neovim 配置
 lua require('options')

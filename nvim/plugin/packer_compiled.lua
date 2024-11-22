@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\talentestors\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\talentestors\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   ["vim-vsnip"] = {
     loaded = true,
     path = "C:\\Users\\talentestors\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",

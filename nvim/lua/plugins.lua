@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'nvim-treesitter/nvim-treesitter-context'
 	-- nvim-tree
+    -- toggleterm
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+      end}
 	use {'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons'}
 	-- bufferline
 	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
