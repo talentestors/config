@@ -60,7 +60,7 @@ Function re_boot{
 Set-Alias -Name reboot -Value re_boot
 
 Function mk_link{
-    param(
+    param (
         [string]$Option,
         [string]$Link,
         [string]$Target
@@ -70,6 +70,8 @@ Function mk_link{
 
 Set-Alias -Name mklink -Value mk_link
 Set-Alias -Name ln -Value mk_link
+
+Set-Alias -Name less -Value more
 
 Function linux_ll{ls | Format-Wide -Column 5 -Property Name}
 
