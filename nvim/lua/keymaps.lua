@@ -22,7 +22,7 @@ local map = vim.api.nvim_set_keymap
 -- nvimTree
 map('n', '<A-m>', ':NvimTreeToggle<CR>', opt)
 map('n', '<A-h>', ':NvimTreeFocus<CR>', opt)
-map('n', '<C-r>', ':NvimTreeRefresh<CR>', opt)
+map('n', '<A-r>', ':NvimTreeRefresh<CR>', opt)
 -- bufferline 左右Tab切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
