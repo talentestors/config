@@ -1,0 +1,4 @@
+[submodule "nvim-config"]
+	path = nvim-config
+	url = git@github.com:talentestors/nvim-config.git
+	branch = main
