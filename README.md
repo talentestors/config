@@ -1,26 +1,25 @@
 # 配置文件信息备份
 
 - Windows
-- - PowerShell
-  - PowerShell V7
-  - msys2
-
+	- PowerShell
+	- PowerShell V7
+	- msys2
 - Neovim
-
 - starship
 
 ---
 
 ## nvim
 
-```bash
+Windows
 
+```powershell
+mklink /J C:\Users\<current-username>\.config\nvim .\nvim-config\
 ```
 
 ## Powershell
 
-```powershell
-```
+`use mklink command of cmd in the Windows`
 
 ## Secret key
 

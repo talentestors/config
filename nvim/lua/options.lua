@@ -1,1 +1,0 @@
--- options.lua for option of neovim
