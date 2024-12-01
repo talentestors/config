@@ -41,7 +41,7 @@ Invoke-Expression (&scoop-search --hook)
 
 # Alias
 
-Function power_off{
+Function power_off {
     param (
         [int]$time
     )
@@ -50,7 +50,7 @@ Function power_off{
 
 Set-Alias -Name poweroff -Value power_off
 
-Function re_boot{
+Function re_boot {
     param (
         [int]$time
     )
@@ -59,7 +59,7 @@ Function re_boot{
 
 Set-Alias -Name reboot -Value re_boot
 
-Function mk_link{
+Function mk_link {
     param (
         [string]$Option,
         [string]$Link,
@@ -77,8 +77,17 @@ Function linux_ll{ls | Format-Wide -Column 5 -Property Name}
 
 Set-Alias -Name ll -Value linux_ll
 
-Function lforce{Get-ChildItem -Force}
+Function lforce { Get-ChildItem -Force }
 
 Set-Alias -Name lf -Value lforce
 
 Set-Alias -Name vim -Value nvim
+
+Function which_gcm {
+    param (
+        [string]$Option
+    )
+    (Get-Command $Option).Path
+}
+
+Set-Alias -Name which -Value which_gcm

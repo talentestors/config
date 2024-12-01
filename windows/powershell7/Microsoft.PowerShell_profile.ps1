@@ -91,3 +91,11 @@ Set-Alias -Name lf -Value lforce
 
 Set-Alias -Name vim -Value nvim
 
+Function which_gcm {
+    param (
+        [string]$Option
+    )
+    (Get-Command $Option).Path
+}
+
+Set-Alias -Name which -Value which_gcm
