@@ -1,11 +1,13 @@
 # Python virtual env
-virtualenv 
-# pipenv #I don't like it.
-poetry
-uv
 
-pipreqs
-pip-tools
+# virtualenv	# It will be relied upon
+pipenv		#I don't like it
+poetry		#Good
+uv			# It's great!
+
+# tools
+pipreqs		# We need a more streamlined requirements.txt
+pip-tools	# Essential for the project
 
 # base package
 numpy
