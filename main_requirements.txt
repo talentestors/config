@@ -1,7 +1,0 @@
-# Python virtual env
-virtualenv 
-pipenv
-poetry
-# base package
-numpy
-matplotlib

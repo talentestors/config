@@ -12,7 +12,7 @@ ZSH_THEME=""
 ## starship
 eval "$(starship init zsh)"
 
-export STARSHIP_CONFIG="C:\Users\talentestors\.config\starship1.toml"
+export STARSHIP_CONFIG=".config\starship1.toml"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
