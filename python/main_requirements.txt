@@ -1,0 +1,12 @@
+# Python virtual env
+virtualenv 
+# pipenv #I don't like it.
+poetry
+uv
+
+pipreqs
+pip-tools
+
+# base package
+numpy
+matplotlib
