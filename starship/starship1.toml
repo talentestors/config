@@ -1,7 +1,9 @@
 command_timeout = 10000
 
+# 根据 schema 提供自动补全
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# 在提示符之间插入空行
 add_newline = false
 
 format = """
@@ -12,15 +14,28 @@ $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
-$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#FCA17D bg:#64AFD9)\
+$c\
+$dotnet\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$lua\
+$nodejs\
+$kotlin\
+$python\
+$rust\
+$scala\
+[](fg:#64AFD9 bg:#06969A)\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
 $line_break\
-$username$character"""
+$username$character\
+"""
 
 [aws]
 format = '[ $symbol($profile)(\($region\))($duration )]($style)'
@@ -34,9 +49,11 @@ format = '[ $symbol($version(-$name))]($style)'
 symbol = " "
 
 [c]
-style = "bg:#86BBD8 white"
+detect_extensions = ["c", "h", "cc", "cpp", "hh", "hpp"]
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version(-$name))]($style)'
-symbol = " "
+# symbol = " "
+symbol = " "
 
 [character]
 # success_symbol = '[➜](bold green)'
@@ -49,6 +66,7 @@ format = '[ $symbol($version)]($style)'
 
 [conda]
 format = '[ $symbol$environment]($style)'
+ignore_base = true
 symbol = " "
 
 [cmd_duration]
@@ -73,7 +91,7 @@ format = '[ $symbol($version)]($style)'
 [directory]
 style = "bg:#DA627D white"
 format = "[ $path$read_only ]($style)"
-truncation_length = 3
+truncation_length = 0
 truncation_symbol = "…/"
 read_only = " "
 
@@ -93,15 +111,17 @@ format = '[ $symbol$context]($style)'
 symbol = " "
 
 [dotnet]
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)(🎯 $tfm)]($style)'
+symbol = ".NET "
 
 [elixir]
-style = "bg:#86BBD8"
+style = "bg:#64AFD9"
 format = '[ $symbol($version \(OTP $otp_version\))]($style)'
 symbol = " "
 
 [elm]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 symbol = " "
 
@@ -121,16 +141,16 @@ style = "bg:#FCA17D white"
 format = '[ $all_status$ahead_behind ]($style)'
 
 [golang]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version) ]($style)'
 symbol = " "
 
 [gradle]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[  $symbol ($version) ]($style)'
 
 [haskell]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 symbol = " "
 
@@ -143,26 +163,29 @@ symbol = " "
 
 [hostname]
 ssh_only = false
-format = '[ $hostname ](bg:#9A348E white)'
+# format = '[ $hostname ](bg:#9A348E white)'
+format = '[ ](bg:#9A348E white)'
 disabled = false
 
 [java]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 symbol = " "
 
 [julia]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 symbol = " "
 
 [kotlin]
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 
 [kubernetes]
 format = '[ $symbol$context( \($namespace\))]($style)'
 
 [lua]
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 
 [memory_usage]
@@ -170,16 +193,16 @@ format = '$symbol[$ram( | $swap)]($style)'
 symbol = " "
 
 [nim]
-style = "bg:#86BBD8 white"
-format = '[ $symbol($version)]($style)'
-symbol = " "
+format = '[ $symbol ($version) ]($style)'
+style = "bg:#64AFD9"
+symbol = "󰆥 "
 
 [nix_shell]
 format = '[ $symbol$state( \($name\))]($style)'
 symbol = " "
 
 [nodejs]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version) ]($style)'
 symbol = " "
 
@@ -221,6 +244,7 @@ format = '[ $symbol$stack]($style)'
 format = '[ $symbol($version)]($style)'
 
 [python]
+style = "bg:#64AFD9 white"
 format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
 symbol = " "
 
@@ -234,12 +258,12 @@ format = '[ $symbol($version)]($style)'
 format = '[ $symbol($version)]($style)'
 
 [rust]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 symbol = " "
 
 [scala]
-style = "bg:#86BBD8 white"
+style = "bg:#64AFD9 white"
 format = '[ $symbol($version)]($style)'
 
 [spack]
@@ -262,8 +286,8 @@ style = "bg:#33658A white"
 format = '[ $time ]($style)'
 
 [username]
-show_always = true
-format = '[$user ]($style)'
+show_always = false
+format = '[$user]($style)'
 disabled = false
 
 [vagrant]
