@@ -1,9 +1,10 @@
 # Python virtual env
 
 # virtualenv	# It will be relied upon
-pipenv		#I don't like it
-poetry		#Good
-uv			# It's great!
+pipenv		# I don't like it
+poetry		# Good
+pipx		# Good
+# uv			# It's great!
 
 # tools
 pipreqs		# We need a more streamlined requirements.txt
