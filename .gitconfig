@@ -1,14 +1,19 @@
 [user]
-	name = talentestors
-	email = talentestors@gmail.com
+    name = talentestors
+    email = talentestors@gmail.com
+	signingkey = 94E2FB40169EEB90
 [http]
-	sslVerify = false
+    sslVerify = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
-	editor = nvim
-	ignorecase = false # 忽略文件大小写
-	autocrlf = true # windows换行符 (only Windows)
-	pager = 
+    editor = nvim
+    ignorecase = false # 忽略文件大小写
+    autocrlf = true # windows换行符 (only Windows)
+    pager =
 [color]
-	ui = always
+    ui = always
+[commit]
+	gpgsign = false
+[gpg]
+	program = C:\\Users\\talentestors\\scoop\\apps\\msys2\\current\\usr\\bin\\gpg.exe
