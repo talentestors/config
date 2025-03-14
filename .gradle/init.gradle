@@ -1,0 +1,84 @@
+// 阿里云仓库和源仓库地址对比：https://developer.aliyun.com/mvn/guide
+
+gradle.projectsLoaded {
+    rootProject.allprojects {
+        buildscript {
+            repositories {
+                def PUBLIC_URL = 'https://maven.aliyun.com/repository/public'
+                def CENTER_URL = 'https://maven.aliyun.com/repository/center'
+                def GOOGLE_URL = 'https://maven.aliyun.com/repository/google'
+                def GRADLE_PLUGIN_URL = 'https://maven.aliyun.com/repository/gradle-plugin/'
+                all { ArtifactRepository repo ->
+                    if (repo instanceof MavenArtifactRepository) {
+                        def url = repo.url.toString()
+                        if (url.startsWith('https://jcenter.bintray.com/')) {
+                            project.logger.lifecycle "Repository ${repo.url} replaced by $PUBLIC_URL."
+                            println("buildscript ${repo.url} replaced by $PUBLIC_URL.")
+                            remove repo
+                        }
+                        else if (url.startsWith('https://dl.google.com/dl/android/maven2/')) {
+                            project.logger.lifecycle "Repository ${repo.url} replaced by $GOOGLE_URL."
+                            println("buildscript ${repo.url} replaced by $GOOGLE_URL.")
+                            remove repo
+                        }
+                        else if (url.startsWith('https://repo1.maven.org/maven2')) {
+                            project.logger.lifecycle "Repository ${repo.url} replaced by $CENTER_URL."
+                            println("buildscript ${repo.url} replaced by $CENTER_URL.")
+                            remove repo
+                        } else if (url.startsWith('https://plugins.gradle.org/m2/')) {
+                            project.logger.lifecycle "Repository ${repo.url} replaced by $GRADLE_PLUGIN_URL."
+                            remove repo
+                        }
+                    }
+                }
+                jcenter {
+                    url PUBLIC_URL
+                }
+                google {
+                    url GOOGLE_URL
+                }
+                maven {
+                    url CENTER_URL
+                }
+            }
+        }
+        repositories {
+            def PUBLIC_URL = 'https://maven.aliyun.com/repository/public'
+            def CENTER_URL = 'https://maven.aliyun.com/repository/center'
+            def GOOGLE_URL = 'https://maven.aliyun.com/repository/google'
+            def GRADLE_PLUGIN_URL = 'https://maven.aliyun.com/repository/gradle-plugin/'
+            all { ArtifactRepository repo ->
+                if (repo instanceof MavenArtifactRepository) {
+                    def url = repo.url.toString()
+                    if (url.startsWith('https://jcenter.bintray.com/')) {
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $PUBLIC_URL."
+                        println("buildscript ${repo.url} replaced by $PUBLIC_URL.")
+                        remove repo
+                    }
+                    else if (url.startsWith('https://dl.google.com/dl/android/maven2/')) {
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $GOOGLE_URL."
+                        println("buildscript ${repo.url} replaced by $GOOGLE_URL.")
+                        remove repo
+                    }
+                    else if (url.startsWith('https://repo1.maven.org/maven2')) {
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $CENTER_URL."
+                        println("buildscript ${repo.url} replaced by $CENTER_URL.")
+                        remove repo
+                    } else if (url.startsWith('https://plugins.gradle.org/m2/')) {
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $GRADLE_PLUGIN_URL."
+                        remove repo
+                    }
+                }
+            }
+            jcenter {
+                url PUBLIC_URL
+            }
+            google {
+                url GOOGLE_URL
+            }
+            maven {
+                url CENTER_URL
+            }
+        }
+    }
+}
