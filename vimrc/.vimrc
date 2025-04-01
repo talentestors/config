@@ -26,13 +26,14 @@ set cursorline     "突出显示当前行
 set showmode               " 显示当前模式
 set fdm=marker
 set clipboard^=unnamed,unnamedplus	" 使 IdeaVim 的剪切板与系统剪切板互通
-" 映射d键到系统剪切板
+" 映射 d 键到系统剪切板
 nnoremap d "+d
 vnoremap d "+d
-" 映射x键到黑洞寄存器（直接删除不保存）
+" 映射 x 键到黑洞寄存器（直接删除不保存）
 nnoremap x "_x
 vnoremap x "_x
-
+" 避免在 v 模式下写入到剪切板
+vnoremap p "_dP
 
 " --- action ---
 "jk退出insert模式
