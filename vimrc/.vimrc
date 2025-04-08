@@ -11,7 +11,6 @@ set softtabstop=4
 set expandtab                  "将tab替换为相应数量空格
 set smartindent
 set backspace=2
-set co=5
 "设置取消备份 禁止临时文件生成
 set nobackup
 set noswapfile
