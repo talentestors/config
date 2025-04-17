@@ -24,7 +24,7 @@ set fileencodings=ucs-bom,utf-8,gbk,cp936,latin1  " 自动检测文件编码的�
 :autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")
 "set mouse=a        "启用鼠标
 set ignorecase     "忽略大小写
-“set cursorline     "突出显示当前行
+"set cursorline     "突出显示当前行
 "set cursorcolumn   "突出显示当前列
 set showmode               " 显示当前模式
 set fdm=marker
