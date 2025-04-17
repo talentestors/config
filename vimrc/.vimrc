@@ -17,10 +17,14 @@ set noswapfile
 "设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
 set showmatch
 "set laststatus=2   "命令行为两行
-"set fenc=utf-8     "文件编码
+set encoding=utf-8
+set fileencoding=utf-8        " 新文件保存时的默认编码
+set fileencodings=ucs-bom,utf-8,gbk,cp936,latin1  " 自动检测文件编码的优先级
+" 退出vim重置光标
+:autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")
 "set mouse=a        "启用鼠标
 set ignorecase     "忽略大小写
-set cursorline     "突出显示当前行
+“set cursorline     "突出显示当前行
 "set cursorcolumn   "突出显示当前列
 set showmode               " 显示当前模式
 set fdm=marker
