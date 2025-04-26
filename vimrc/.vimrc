@@ -29,9 +29,6 @@ set ignorecase     "忽略大小写
 set showmode               " 显示当前模式
 set fdm=marker
 set clipboard^=unnamed,unnamedplus	" 使 IdeaVim 的剪切板与系统剪切板互通
-" 映射 d 键到系统剪切板
-nnoremap d "+d
-vnoremap d "+d
 " 映射 x 键到黑洞寄存器（直接删除不保存）
 nnoremap x "_x
 vnoremap x "_x
