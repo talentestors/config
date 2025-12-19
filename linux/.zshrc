@@ -31,6 +31,8 @@ zinit ice wait"1" lucid for \
     OMZL::history.zsh \
     OMZL::key-bindings.zsh \
     OMZL::completion.zsh \
+    OMZL::grep.zsh \
+    OMZL::directories.zsh \
     OMZL::git.zsh \
     OMZP::git \
     OMZP::gitignore \
