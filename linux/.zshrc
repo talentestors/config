@@ -26,19 +26,17 @@ zinit wait"0" lucid light-mode for \
     zdharma-continuum/fast-syntax-highlighting \
     zdharma-continuum/history-search-multi-word
 
-zinit ice wait"1" lucid for \
-    OMZL::clipboard.zsh \
-    OMZL::history.zsh \
-    OMZL::key-bindings.zsh \
-    OMZL::completion.zsh \
-    OMZL::grep.zsh \
-    OMZL::directories.zsh \
-    OMZL::git.zsh \
-    OMZP::git \
-    OMZP::gitignore \
-    OMZP::emoji \
-    OMZP::vscode \
-    OMZP::z
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::grep.zsh
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::gitignore
+zinit snippet OMZP::vscode
+zinit snippet OMZP::z
 
 ### End of Zinit's installer chunk
 
