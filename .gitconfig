@@ -1,19 +1,32 @@
 [user]
     name = talentestors
-    email = talentestors@gmail.com
-	signingkey = 94E2FB40169EEB90
+	email = i@yuhiri.me
+	signingKey = ~/.ssh/id_ed25519.pub
 [http]
     sslVerify = false
+	sslBackend = schannel
 [init]
     defaultBranch = main
 [core]
     editor = nvim
     ignorecase = false # 忽略文件大小写
     autocrlf = true # windows换行符 (only Windows)
-    pager =
 [color]
     ui = always
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
-	program = C:\\Users\\talentestors\\scoop\\apps\\msys2\\current\\usr\\bin\\gpg.exe
+	format = ssh
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = utf-8
+
+[gpg "ssh"]
+    # git config --global gpg.ssh.allowedSignersFile "~/.ssh/allowedSigners"
+    # echo "i@yuhiri.com $(cat ~/.ssh/id_ed25519.pub)" > ~/.ssh/allowedSigners
+	allowedSignersFile = ~/.ssh/allowedSigners # 
