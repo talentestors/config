@@ -1,0 +1,63 @@
+[source]
+
+[source.crates-io]
+replace-with = "bfsu-sparse"
+
+[source.bfsu-sparse]
+registry = "sparse+https://mirrors.bfsu.edu.cn/crates.io-index/"
+
+[registries]
+
+[registries.aliyun-sparse]
+index = "sparse+https://mirrors.aliyun.com/crates.io-index/"
+
+[registries.bfsu]
+index = "https://mirrors.bfsu.edu.cn/git/crates.io-index.git"
+
+[registries.bfsu-sparse]
+index = "sparse+https://mirrors.bfsu.edu.cn/crates.io-index/"
+
+[registries.cernet]
+index = "https://mirrors.cernet.edu.cn/crates.io-index.git"
+
+[registries.cernet-sparse]
+index = "sparse+https://mirrors.cernet.edu.cn/crates.io-index/"
+
+[registries.cqu-sparse]
+index = "sparse+https://mirrors.cqu.edu.cn/crates.io-index/"
+
+[registries.nju]
+index = "https://mirror.nju.edu.cn/git/crates.io-index.git"
+
+[registries.rsproxy]
+index = "https://rsproxy.cn/crates.io-index"
+
+[registries.rsproxy-sparse]
+index = "sparse+https://rsproxy.cn/index/"
+
+[registries.sjtu]
+index = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
+
+[registries.sjtu-sparse]
+index = "sparse+https://mirrors.sjtug.sjtu.edu.cn/crates.io-index/"
+
+[registries.tuna]
+index = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+[registries.tuna-sparse]
+index = "sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/"
+
+[registries.ustc]
+index = "https://mirrors.ustc.edu.cn/crates.io-index"
+
+[registries.ustc-sparse]
+index = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
+
+[registries.zju-sparse]
+index = "sparse+https://mirrors.zju.edu.cn/crates.io-index/"
+
+[net]
+git-fetch-with-cli = true
+
+[build]
+rustc-wrapper = "sccache"
